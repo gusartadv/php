@@ -1,0 +1,15 @@
+
+<HTML>
+<HEAD>
+<TITLE>Borrar2.php</TITLE>
+</HEAD>
+<BODY>
+<?php
+include("configuracion.php");
+$query="Delete From Vacante Where nombre = '".$_POST['nombre']."'";
+mysql_query($query);
+?>
+<h1><div align="center">Registro Borrado</div></h1>
+<div align="center"><a href="/consulta.html">Ver los registros</a></div>
+</BODY>
+</HTML>
