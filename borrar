@@ -1,0 +1,30 @@
+
+    <HTML>
+    <HEAD>
+    <TITLE>Borrar1.php</TITLE>
+    </HEAD>
+    <BODY>
+    <div align="center">
+    <h1>Borrar un registro</h1>
+    <br>
+    <?php
+    include("configuracion.php");
+    echo '<FORM METHOD="POST" ACTION="borrar2.php">Nombre de la Vacante<br>';
+    //Creamos la sentencia SQL y la ejecutamos
+    $query="Select nombre From Vacante Order By nombre";
+    $result=mysql_query($query);
+    echo '<select name="nombre">';
+    while ($row=mysql_fetch_array($result))
+    {echo '<option>'.$row["nombre"];}
+    mysql_free_result($result)
+    ?>
+    </select>
+    <br>
+    <INPUT TYPE="SUBMIT" value="Borrar">
+    <a href=aleatorio.php>Mostrar 6 registros aleatoriamente<a>;
+    <a href=index.php>Insertar<a>;
+    <a href=consulta.html>Eliminar<a>;
+    </FORM>
+    </div>
+    </BODY>
+    </HTML>
