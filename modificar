@@ -1,0 +1,36 @@
+
+    <HTML>
+    <HEAD>
+    <TITLE>Modificar</TITLE>
+    </HEAD>
+    <BODY>
+    <div align="center">
+    <h1>Modificar un registro</h1>
+    <br>
+    <?php
+    include("configuracion.php");
+    echo '<FORM METHOD="POST" ACTION="modificar2.php">Nombre<br>';
+    $query="Select * From Vacante Order By nombre";
+    $result=mysql_query($query);
+    echo '<select name="nombre">';
+    while ($row=mysql_fetch_array($result))
+    {echo '<option>'.$row["nombre"];}
+    echo '</select><br>Descripción<br><INPUT TYPE="TEXT" NAME="descripcion" ><br>';
+    ?>
+    Tiempo<br>
+    <INPUT TYPE="TEXT" NAME="tiempo"><br>
+    Salario<br>
+    <INPUT TYPE="TEXT" NAME="salario"><br>
+    Email<br>
+    <INPUT TYPE="TEXT" NAME="email"><br>
+    Teléfono<br>
+    <INPUT TYPE="TEXT" NAME="telefono"><br>
+    Empresa<br>
+    <INPUT TYPE="TEXT" NAME="empresa"><br>
+    <!--Nombre<br>
+    <INPUT TYPE="TEXT" NAME="nombre"><br>-->
+    <INPUT TYPE="SUBMIT" value="Modificar">
+    </FORM>
+    </div>
+    </BODY>
+    </HTML>
