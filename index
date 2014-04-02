@@ -1,0 +1,38 @@
+
+    <?php
+    echo "<!DOCTYPE HTML>
+    <html>
+    <head>
+    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">
+    <title>Test Vacante con Vicente Zag
+    </title>
+    </head>
+    <body>
+    <h1>CRUD BASICO PHP</h1><hr>
+    <form name=\"datos\" id=\"datos\" method=\"post\" action=\"guardar.php\" >
+    Llave primaria
+    <br/><input name=\"id\" /><br/>
+    Descripción
+    <br/><input name=\"descripcion\" /><br/>
+    tiempo  <br/>
+    <input name=\"tiempo\" /> <br/>
+    Salario<br/>
+    <input name=\"salario\" /><br/>
+    Teléfono<br/>
+    <input name=\"telefono\" /><br/>
+    Email<br/>
+    <input name=\"email\" size=\"40\" /><br/>
+    Empresa
+    <br/><input name=\"empresa\" /><br/>
+    Nombre del Puesto
+    <br/><input name=\"nombre\" /><br/>
+    <br/>
+    <input type=\"submit\" name=\"Guardar\" value=\"Guardar\"/>
+    </form>
+    </body>
+    <a href=consulta.html>Ver registros</a><a href=borrar.php>Borrar<a><
+    a href=aleatorio.php>Mostrar 6 registros aleatoriamente<a>
+    </html>";
+    
+    ?>
+
