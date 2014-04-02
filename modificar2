@@ -1,0 +1,30 @@
+
+    <HTML>
+    <HEAD>
+    <TITLE>Modificar</TITLE>
+    </HEAD>
+    <BODY>
+    <?php
+    include("configuracion.php");
+    $id=$_GET['id'];
+    $descripcion=$_POST['descripcion'];
+    $tiempo=$_POST['tiempo'];
+    $salario=$_POST['salario'];
+    $email=$_POST['email'];
+    $telefono=$_POST['telefono'];
+    $empresa=$_POST['empresa'];
+    $nombre=$_POST['nombre'];
+    echo "<p> Dato:".$descripcion." entrado</p>";
+    echo "<p> id:".$id." entrado</p>";
+    $query="UPDATE Vacante SET descripcion = '".$_POST['descripcion']."',
+    tiempo= '".$_POST['tiempo']."', salario= '".$_POST['salario']."', 
+    email = '".$_POST['email']."', telefono= '".$_POST['telefono']."',
+    empresa= '".$_POST['empresa']."'  WHERE nombre = '$nombre'";
+    $result=mysql_query($query) or die("Error ejecutar la instrucción SQL ".mysql_error());
+    echo "Registro modificado<br/>";
+    echo "<a href=consulta.html>Ver resultados</a>";
+    echo "<a href=index.php>  Insertar Nuevo</a>";
+    mysql_close();
+    ?>
+    </BODY>
+    </HTML>
